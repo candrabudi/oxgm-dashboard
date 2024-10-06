@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ProviderTypeAssignment extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'provider_id',
+        'game_type_code_id',
+    ];
 }

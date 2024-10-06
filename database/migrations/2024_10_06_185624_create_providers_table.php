@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('provider_code');
             $table->string('provider_category');
             $table->integer('provider_status');
+            $table->integer('product_code');
             $table->string('pri_image')->nullable();
             $table->string('sec_image')->nullable();
             $table->timestamps();

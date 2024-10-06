@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/scrap/provider', [GameController::class, 'getProvider']);
+Route::get('/scrap/games', [GameController::class, 'getProviderGames']);
 Route::get('/', function () {
     return view('welcome');
 });
