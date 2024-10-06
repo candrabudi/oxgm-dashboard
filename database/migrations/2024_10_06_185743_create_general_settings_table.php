@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('general_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->enum('role', ['superadmin', 'admin', 'cs','user']);
-            $table->integer('is_active');
-            $table->rememberToken();
+            $table->string('web_name');
+            $table->string('web_description');
+            $table->string('web_logo_url');
+            $table->string('web_favicon_url');
+            $table->string('web_url');
+            $table->string('web_status')->default(1);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('general_settings');
     }
 };

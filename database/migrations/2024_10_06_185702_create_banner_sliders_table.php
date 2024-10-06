@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('banner_sliders', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->enum('role', ['superadmin', 'admin', 'cs','user']);
-            $table->integer('is_active');
-            $table->rememberToken();
+            $table->string('banner_name');
+            $table->string('banner_url');
+            $table->integer('banner_status')->default(0);
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('banner_sliders');
     }
 };
