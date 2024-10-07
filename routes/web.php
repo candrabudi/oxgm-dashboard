@@ -3,6 +3,10 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\GeneralSettingController;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PaymentAccountController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,3 +30,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/setting/general', [GeneralSettingController::class, 'index'])->name('setting.general');
+Route::post('/setting/general/save', [GeneralSettingController::class, 'saveSettings'])->name('setting.general.save');
+Route::get('/member/list', [MemberController::class, 'index'])->name('member.list');
+
+Route::get('/payment/list', [PaymentController::class, 'index'])->name('payment.list');
+Route::get('/payment/generate', [PaymentController::class, 'generatePayment'])->name('payment.generate');
+
+Route::get('/payment-account/list', [PaymentAccountController::class, 'index'])->name('paymentaccount.list');
+Route::post('/payment-account/save', [PaymentAccountController::class, 'store'])->name('paymentaccount.store');
+Route::get('/payment-account/toggle/{a}', [PaymentAccountController::class, 'toggleAccountStatus'])->name('paymentaccount.toggle');
+Route::post('/payment-account/update/{a}', [PaymentAccountController::class, 'update'])->name('paymentaccount.update');

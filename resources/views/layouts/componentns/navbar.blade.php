@@ -3,7 +3,7 @@
     <div class="flex h-full items-center">
         <!-- BEGIN: Logo -->
         <a href="#" class="-intro-x hidden md:flex xl:w-[180px]">
-            <img class="w-6" src="images/logo.svg" alt="Enigma Tailwind HTML Admin Template">
+            <img class="w-6" src="{{ asset('images/logo.svg') }}" alt="Enigma Tailwind HTML Admin Template">
             <span class="ml-3 text-lg text-white hidden xl:block">
                 Enigma
             </span>

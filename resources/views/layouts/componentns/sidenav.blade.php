@@ -1,7 +1,7 @@
 <nav class="side-nav z-50 -mt-4 hidden w-[100px] overflow-x-hidden px-5 pb-16 pt-32 md:block xl:w-[260px]">
     <ul>
         <li>
-            <a href="enigma-side-menu-inbox-page.html" class="side-menu">
+            <a href="{{ route('dashboard') }}" class="side-menu">
                 <div class="side-menu__icon">
                     <i data-tw-merge="" data-lucide="home" class="stroke-1.5 w-5 h-5"></i>
                 </div>
@@ -196,7 +196,7 @@
         </li>
 
         <li>
-            <a href="enigma-side-menu-inbox-page.html" class="side-menu">
+            <a href="{{ route('setting.general') }}" class="side-menu">
                 <div class="side-menu__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layers" class="lucide lucide-layers stroke-1.5 w-5 h-5 mx-auto block"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg>
                 </div>
