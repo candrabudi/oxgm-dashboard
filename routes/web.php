@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BannerPromotionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\GeneralSettingController;
@@ -41,3 +42,8 @@ Route::get('/payment-account/list', [PaymentAccountController::class, 'index'])-
 Route::post('/payment-account/save', [PaymentAccountController::class, 'store'])->name('paymentaccount.store');
 Route::get('/payment-account/toggle/{a}', [PaymentAccountController::class, 'toggleAccountStatus'])->name('paymentaccount.toggle');
 Route::post('/payment-account/update/{a}', [PaymentAccountController::class, 'update'])->name('paymentaccount.update');
+
+
+Route::get('/promotion/banner/list', [BannerPromotionController::class, 'index'])->name('bannerpromotion.list');
+Route::post('/promotion/banner/save', [BannerPromotionController::class, 'store'])->name('bannerpromotion.store');
+Route::post('/promotion/banner/update/{a}', [BannerPromotionController::class, 'update'])->name('bannerpromotion.update');
