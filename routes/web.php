@@ -4,12 +4,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerPromotionController;
 use App\Http\Controllers\CkeditorController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DepositController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\GeneralSettingController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PaymentAccountController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\WithdrawController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,3 +56,14 @@ Route::get('/promotion/list', [PromotionController::class, 'index'])->name('prom
 Route::get('/promotion/create', [PromotionController::class, 'create'])->name('promotion.create');
 Route::post('/promotion/store', [PromotionController::class, 'store'])->name('promotion.store');
 Route::post('/ckeditor/upload', [CkeditorController::class, 'uploadImage'])->name('posts.uploadImage');
+
+
+Route::get('/deposit/list', [DepositController::class, 'index'])->name('deposit.list');
+Route::get('/deposit/paginate', [DepositController::class, 'lists'])->name('deposit.paginate');
+Route::post('/deposit/approve/{a}', [DepositController::class, 'approveTransaction'])->name('deposit.approve');
+Route::post('/deposit/reject/{a}', [DepositController::class, 'rejectTransaction'])->name('deposit.reject');
+
+Route::get('/withdraw/list', [WithdrawController::class, 'index'])->name('withdraw.list');
+Route::get('/withdraw/paginate', [WithdrawController::class, 'lists'])->name('withdraw.paginate');
+Route::post('/withdraw/approve/{a}', [WithdrawController::class, 'approveTransaction'])->name('withdraw.approve');
+Route::post('/withdraw/reject/{a}', [WithdrawController::class, 'rejectTransaction'])->name('withdraw.reject');

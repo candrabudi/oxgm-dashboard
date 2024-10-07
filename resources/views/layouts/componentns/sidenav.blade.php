@@ -35,7 +35,7 @@
             </a>
             <ul class="">
                 <li>
-                    <a href="enigma-side-menu-crud-data-list-page.html" class="side-menu">
+                    <a href="{{ route('deposit.list') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-tw-merge="" data-lucide="activity" class="stroke-1.5 w-5 h-5"></i>
                         </div>
@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="enigma-side-menu-crud-form-page.html" class="side-menu">
+                    <a href="{{ route('withdraw.list') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-tw-merge="" data-lucide="activity" class="stroke-1.5 w-5 h-5"></i>
                         </div>
