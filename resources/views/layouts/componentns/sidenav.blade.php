@@ -91,12 +91,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="enigma-side-menu-crud-form-page.html" class="side-menu">
+                    <a href="{{ route('promotion.list') }}" class="side-menu">
                         <div class="side-menu__icon">
                             <i data-tw-merge="" data-lucide="activity" class="stroke-1.5 w-5 h-5"></i>
                         </div>
                         <div class="side-menu__title">
-                            Data Promosi
+                            Promosi
                         </div>
                     </a>
                 </li>

@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerPromotionController;
+use App\Http\Controllers\CkeditorController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\GeneralSettingController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PaymentAccountController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PromotionController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -47,3 +49,8 @@ Route::post('/payment-account/update/{a}', [PaymentAccountController::class, 'up
 Route::get('/promotion/banner/list', [BannerPromotionController::class, 'index'])->name('bannerpromotion.list');
 Route::post('/promotion/banner/save', [BannerPromotionController::class, 'store'])->name('bannerpromotion.store');
 Route::post('/promotion/banner/update/{a}', [BannerPromotionController::class, 'update'])->name('bannerpromotion.update');
+
+Route::get('/promotion/list', [PromotionController::class, 'index'])->name('promotion.list');
+Route::get('/promotion/create', [PromotionController::class, 'create'])->name('promotion.create');
+Route::post('/promotion/store', [PromotionController::class, 'store'])->name('promotion.store');
+Route::post('/ckeditor/upload', [CkeditorController::class, 'uploadImage'])->name('posts.uploadImage');
